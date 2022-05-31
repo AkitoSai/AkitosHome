@@ -10,10 +10,8 @@
 自建的class、透過Http的get方式向spkuji_api請求響應再用SportKujiRequestUnitViewDelegate的protocol來回傳結果給delegate。
 
 - AudioPlayer:  
-使用了AVFoundation以及AudioToolbox的一些功能來播放背景音樂(BGM)以及效果音(SE)
-  
-  
-  
+使用了AVFoundation以及AudioToolbox的一些功能來播放背景音樂(BGM)以及效果音(SE)  
+
 ====================================  
 Read Me  
 Created by 蔡 易達 on 2022/5/31.  
