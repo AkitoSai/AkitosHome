@@ -1,9 +1,4 @@
 # AkitosHome
-Read Me   
-Created by 蔡 易達 on 2022/5/31.  
-Copyright © 2022年 蔡 易達. All rights reserved.
-
-==============================================
 
 - MainViewController：  
 主頁面、包含了一個按鈕、按下後可切換至SportKujiViewController
@@ -16,3 +11,8 @@ Copyright © 2022年 蔡 易達. All rights reserved.
 
 - AudioPlayer:  
 使用了AVFoundation以及AudioToolbox的一些功能來播放背景音樂(BGM)以及效果音(SE)
+
+====================================  
+Read Me  
+Created by 蔡 易達 on 2022/5/31.  
+Copyright © 2022年 蔡 易達. All rights reserved.
