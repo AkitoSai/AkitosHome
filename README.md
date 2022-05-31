@@ -18,6 +18,7 @@ SportKujiRequestUnitView:
 
 AudioPlayer:
 使用了AVFoundation以及AudioToolbox的一些功能來播放背景音樂(BGM)以及效果音(SE)
-====================AkitosHome.xcodeproj====================//
+
+====================AkitosHome.xcodeproj====================
 
 
