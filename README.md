@@ -1,9 +1,8 @@
 # AkitosHome
-//  Read Me
-//  AkitosHome.xcodeproj
-//
-//  Created by 蔡 易達 on 2022/5/31.
-//  Copyright © 2022年 蔡 易達. All rights reserved.
+Read Me
+AkitosHome.xcodeproj
+Created by 蔡 易達 on 2022/5/31.
+Copyright © 2022年 蔡 易達. All rights reserved.
 
 
 //====================AkitosHome.xcodeproj====================//
