@@ -1,8 +1,12 @@
 # AkitosHome
 
+
+# 主頁面
 - MainViewController：  
 主頁面、包含了一個按鈕、按下後可切換至 SportKujiViewController
 
+
+# スポーツくじ功能頁面
 - SportKujiViewController 
 自建的 class (SportKujiRequestUnitView) 抓取日本スポーツくじ的 API (spkuji_api)、實現抓取後並顯示當期開獎數字
 
