@@ -1,4 +1,4 @@
-# AkitosHome
+# AkitosHome 1.1.0
 
 
 # 主頁面
@@ -11,7 +11,11 @@
 自建的 class (SportKujiRequestUnitView) 抓取日本スポーツくじ的 API (spkuji_api)、實現抓取後並顯示當期開獎數字
 
 - SportKujiRequestUnitView
-自建的 class、透過 Http 的 get 方式向 spkuji_api 請求響應再用 SportKujiRequestUnitViewDelegate 的 protocol 來回傳結果給 delegate
+透過自建的 class、透過 Http 的 get 方式向 spkuji_api 請求響應再用 SportKujiRequestUnitViewDelegate 的 protocol 來回傳結果給 delegate
+
+# 打海賊遊戲功能頁面
+- PirateGameViewController 
+遊戲的ViewController、 負責跟主頁面之間的切換以及音樂播放、控制器中置入遊戲主要控制中心 PirateMainGameCenter 執行遊戲
 
 
 # 音樂播放器
