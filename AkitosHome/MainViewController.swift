@@ -57,7 +57,7 @@ class MainViewController: UIViewController,URLSessionDelegate {
         //=====================================================//
 
         
-        //======== 初始化全體音效播放器 myAudioPlayer ========//
+        //======== 建立前往 mySportKujiViewController 頁面的 UIButton ========//
         let goToSportKujiButton = UIButton(frame: CGRect(x: 0, y: 0, width: 305*zoomSize, height: 72*zoomSize))
         goToSportKujiButton.layer.masksToBounds = true
         goToSportKujiButton.layer.cornerRadius = 15.0
