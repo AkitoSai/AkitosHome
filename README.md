@@ -3,7 +3,7 @@
 
 # 主頁面
 - MainViewController：  
-主頁面、包含了一個按鈕、按下後可切換至 SportKujiViewController
+主頁面，包含了2個按鈕，按下後可切換至 SportKujiViewController 以及 PirateGameViewController
 
 
 # スポーツくじ功能頁面
@@ -17,6 +17,11 @@
 - PirateGameViewController 
 遊戲的ViewController、 負責跟主頁面之間的切換以及音樂播放、控制器中置入遊戲主要控制中心 PirateMainGameCenter 執行遊戲
 
+- PirateMainGameCenter 
+遊戲主要控制中心、遊戲的控制流程以及透過 mainTimer 管理進行流程、操作判斷、計時、計分...等，敵人以及遊戲效果則是分別交由 EnemyUnitView 以及 EffectUnitView 執行  
+
+- EnemyUnitView 
+自建敵人的物件class、管理敵人的移動、動畫是否被擊殺...等動作狀態，var killed: (() -> Void)?
 
 # 音樂播放器
 - AudioPlayer:  
