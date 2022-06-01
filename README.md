@@ -8,20 +8,20 @@
 
 # スポーツくじ功能頁面
 - SportKujiViewController 
-自建的 class (SportKujiRequestUnitView) 抓取日本スポーツくじ的 API (spkuji_api)、實現抓取後並顯示當期開獎數字
+自建的 class (SportKujiRequestUnitView) 抓取日本スポーツくじ的 API (spkuji_api)，實現抓取後並顯示當期開獎號碼
 
 - SportKujiRequestUnitView
-透過自建的 class、透過 Http 的 get 方式向 spkuji_api 請求響應再用 SportKujiRequestUnitViewDelegate 的 protocol 來回傳結果給 delegate
+透過 Http 的 get 方式向 spkuji_api 請求響應再用 SportKujiRequestUnitViewDelegate 的 protocol 來回傳結果給 delegate 的方式實現的 class
 
 # 打海賊遊戲功能頁面
 - PirateGameViewController 
-遊戲的ViewController、 負責跟主頁面之間的切換以及音樂播放、控制器中置入遊戲主要控制中心 PirateMainGameCenter 執行遊戲
+遊戲的ViewController ，負責跟主頁面之間的切換以及音樂播放，放入遊戲主要控制中心 PirateMainGameCenter 執行遊戲
 
 - PirateMainGameCenter 
 遊戲主要控制中心、遊戲的控制流程以及透過 mainTimer 管理進行流程、操作判斷、計時、計分...等，敵人以及遊戲效果則是分別交由 EnemyUnitView 以及 EffectUnitView 執行  
 
 - EnemyUnitView 
-自建敵人的物件class、管理敵人的移動、動畫是否被擊殺...等動作狀態，var killed: (() -> Void)?
+自建敵人的物件class、管理敵人的移動、動畫、是否被擊殺...等動作狀態，敵人被擊殺時，由於之前Http請求功能時已經使用過 delegate 方式了，這邊嘗試使用 Closure 方式 ”var killed: (() -> Void)?“ 實現與遊戲主要控制中心的溝通
 
 # 音樂播放器
 - AudioPlayer:  
