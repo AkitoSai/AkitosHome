@@ -12,9 +12,15 @@
 		0426256D28432B5C00B21582 /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 0426256C28432B5C00B21582 /* Audio */; };
 		0426256F28435AAA00B21582 /* Image in Resources */ = {isa = PBXBuildFile; fileRef = 0426256E28435AAA00B21582 /* Image */; };
 		04262583284599AA00B21582 /* SportKujiRequestUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04262582284599AA00B21582 /* SportKujiRequestUnitView.swift */; };
+		0477371528483EDD003E6C8C /* LeaderboardUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477371428483EDD003E6C8C /* LeaderboardUnitView.swift */; };
+		0477371B2848AE6B003E6C8C /* LeaderboardDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477371A2848AE6B003E6C8C /* LeaderboardDrawView.swift */; };
+		04AD3E24284756610026FBBF /* EffectUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD3E23284756610026FBBF /* EffectUnitView.swift */; };
 		04C72E932845FD0400FEAA54 /* SportKujiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C72E922845FD0400FEAA54 /* SportKujiViewController.swift */; };
 		04C72EA02846A6D400FEAA54 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C72E9F2846A6D400FEAA54 /* SystemConfiguration.framework */; };
 		04C72EA42846B26D00FEAA54 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 04C72EA32846B26D00FEAA54 /* Reachability.m */; };
+		04EC7EC6284700700025A54A /* PirateGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC7EC5284700700025A54A /* PirateGameViewController.swift */; };
+		04EC7EC8284719150025A54A /* PirateMainGameCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC7EC7284719150025A54A /* PirateMainGameCenter.swift */; };
+		04EC7ECA28472BD80025A54A /* EnemyUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC7EC928472BD80025A54A /* EnemyUnitView.swift */; };
 		651AA64E283CD47F0027E1F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651AA64D283CD47F0027E1F2 /* AppDelegate.swift */; };
 		651AA650283CD47F0027E1F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651AA64F283CD47F0027E1F2 /* MainViewController.swift */; };
 		651AA655283CD4810027E1F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651AA654283CD4810027E1F2 /* Assets.xcassets */; };
@@ -27,11 +33,17 @@
 		0426256C28432B5C00B21582 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = AkitosHome/Audio; sourceTree = "<group>"; };
 		0426256E28435AAA00B21582 /* Image */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Image; path = AkitosHome/Image; sourceTree = "<group>"; };
 		04262582284599AA00B21582 /* SportKujiRequestUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportKujiRequestUnitView.swift; sourceTree = "<group>"; };
+		0477371428483EDD003E6C8C /* LeaderboardUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardUnitView.swift; sourceTree = "<group>"; };
+		0477371A2848AE6B003E6C8C /* LeaderboardDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardDrawView.swift; sourceTree = "<group>"; };
+		04AD3E23284756610026FBBF /* EffectUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectUnitView.swift; sourceTree = "<group>"; };
 		04C72E922845FD0400FEAA54 /* SportKujiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportKujiViewController.swift; sourceTree = "<group>"; };
 		04C72E9F2846A6D400FEAA54 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		04C72EA12846B26D00FEAA54 /* AkitosHome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AkitosHome-Bridging-Header.h"; sourceTree = "<group>"; };
 		04C72EA22846B26D00FEAA54 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		04C72EA32846B26D00FEAA54 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		04EC7EC5284700700025A54A /* PirateGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PirateGameViewController.swift; sourceTree = "<group>"; };
+		04EC7EC7284719150025A54A /* PirateMainGameCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PirateMainGameCenter.swift; sourceTree = "<group>"; };
+		04EC7EC928472BD80025A54A /* EnemyUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnemyUnitView.swift; sourceTree = "<group>"; };
 		651AA64A283CD47F0027E1F2 /* AkitosHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AkitosHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		651AA64D283CD47F0027E1F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		651AA64F283CD47F0027E1F2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +100,12 @@
 				651AA64F283CD47F0027E1F2 /* MainViewController.swift */,
 				04C72E922845FD0400FEAA54 /* SportKujiViewController.swift */,
 				04262582284599AA00B21582 /* SportKujiRequestUnitView.swift */,
+				04EC7EC5284700700025A54A /* PirateGameViewController.swift */,
+				04EC7EC7284719150025A54A /* PirateMainGameCenter.swift */,
+				0477371428483EDD003E6C8C /* LeaderboardUnitView.swift */,
+				0477371A2848AE6B003E6C8C /* LeaderboardDrawView.swift */,
+				04EC7EC928472BD80025A54A /* EnemyUnitView.swift */,
+				04AD3E23284756610026FBBF /* EffectUnitView.swift */,
 				042625612842E65900B21582 /* AudioPlayer.swift */,
 				651AA654283CD4810027E1F2 /* Assets.xcassets */,
 				651AA656283CD4810027E1F2 /* LaunchScreen.storyboard */,
@@ -172,10 +190,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EC7ECA28472BD80025A54A /* EnemyUnitView.swift in Sources */,
 				04262583284599AA00B21582 /* SportKujiRequestUnitView.swift in Sources */,
 				04C72E932845FD0400FEAA54 /* SportKujiViewController.swift in Sources */,
+				04EC7EC8284719150025A54A /* PirateMainGameCenter.swift in Sources */,
+				04EC7EC6284700700025A54A /* PirateGameViewController.swift in Sources */,
 				042625622842E65900B21582 /* AudioPlayer.swift in Sources */,
 				651AA650283CD47F0027E1F2 /* MainViewController.swift in Sources */,
+				0477371B2848AE6B003E6C8C /* LeaderboardDrawView.swift in Sources */,
+				0477371528483EDD003E6C8C /* LeaderboardUnitView.swift in Sources */,
+				04AD3E24284756610026FBBF /* EffectUnitView.swift in Sources */,
 				04C72EA42846B26D00FEAA54 /* Reachability.m in Sources */,
 				651AA64E283CD47F0027E1F2 /* AppDelegate.swift in Sources */,
 			);
@@ -325,6 +349,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = akito.tw.AkitosHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AkitosHome/AkitosHome-Bridging-Header.h";
@@ -346,6 +371,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = akito.tw.AkitosHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AkitosHome/AkitosHome-Bridging-Header.h";

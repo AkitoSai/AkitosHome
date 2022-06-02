@@ -32,10 +32,8 @@ struct SportKujiResult: Codable {
     
 }
 
+
 class SportKujiRequestUnitView:UIView {
-    
-    // 代理
-    var delegate: SportKujiRequestUnitViewDelegate?
     
     // 請求結果狀態訊息代碼
     // -1: 無網路連連線
@@ -71,7 +69,13 @@ class SportKujiRequestUnitView:UIView {
     // 存放獲得的響應的 SportKujiResults struct
     var mySportKujiResults:SportKujiResults?
     
+    // 代理
+    var delegate: SportKujiRequestUnitViewDelegate?
+    
+    
+    //=====================================================//
     // 初始化 init
+    //=====================================================//
     override init(frame:CGRect){
         
         super.init(frame: frame)
@@ -92,7 +96,9 @@ class SportKujiRequestUnitView:UIView {
         
     }
     
+    //=====================================================//
     // 初始化 init?
+    //=====================================================//
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
@@ -267,7 +273,7 @@ class SportKujiRequestUnitView:UIView {
                 // 更改狀態為執行中
                 setLoadingStatus(isLoading: true)
                 
-                // 執行交給 global 的 Queue　處理
+                //遊戲執行交給 global 的 Queue　處理
                 DispatchQueue.global(qos: .userInitiated).async {
                     urlSessionDataTask.resume()
                 }

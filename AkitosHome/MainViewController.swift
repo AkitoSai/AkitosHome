@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainViewController: UIViewController,URLSessionDelegate {
     
@@ -22,6 +23,8 @@ class MainViewController: UIViewController,URLSessionDelegate {
     // スポーツくじ開獎頁面的 ViewController
     var mySportKujiViewController:SportKujiViewController?
     
+    //海賊遊戲頁面的 ViewController
+    var myPirateGameViewController:PirateGameViewController?
     
     override func viewDidLoad() {
         
@@ -69,6 +72,20 @@ class MainViewController: UIViewController,URLSessionDelegate {
         //=====================================================//
         
         
+        //======== 建立前往 myPirateGameViewController 頁面的 UIButton ========//
+        let goToPirateGameButton = UIButton(frame: CGRect(x: 0, y: 0, width: 305*zoomSize, height: 72*zoomSize))
+        //goToPirateGameButton.layer.masksToBounds = true
+        goToPirateGameButton.layer.cornerRadius = 15.0
+        goToPirateGameButton.setImage(UIImage(named: "Image/img_main_button_01.png"), for: .normal)
+        //goToPirateGameButton.setTitle("Kill Pirates", for: .normal)
+        //goToPirateGameButton.setTitleColor(UIColor.yellow, for: .normal)
+        //goToPirateGameButton.titleLabel?.font = UIFont(name: "Arial Rounded MT Bold", size: 15)
+        goToPirateGameButton.addTarget(nil, action: #selector(self.goToMyPirateGameViewController), for: .touchUpInside)
+        goToPirateGameButton.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.77)
+        self.view.addSubview(goToPirateGameButton)
+        //=====================================================//
+        
+        
         //======== 初始化全體音效播放器 myAudioPlayer ========//
         myAudioPlayer = AudioPlayer()
         //=====================================================//
@@ -109,7 +126,9 @@ class MainViewController: UIViewController,URLSessionDelegate {
     }
     
 
+    //=====================================================//
     // 前往 mySportKujiViewController 頁面的函式
+    //=====================================================//
     @objc func goToSportKujiViewController() {
         
         //播放效果音 SE:0
@@ -144,6 +163,61 @@ class MainViewController: UIViewController,URLSessionDelegate {
         
     }
     
+    
+    //=====================================================//
+    // 前往 myPirateGameViewController 頁面的函式
+    //=====================================================//
+    @objc func goToMyPirateGameViewController() {
+        
+        //播放效果音 SE:0
+        playAudio(type:.se,index:0)
+        
+        //判斷 navigationController 中最頂端的是否是自己(mainViewController)
+        if(self.navigationController?.topViewController?.isKind(of:MainViewController.self))!{
+            
+            // 設定換頁動畫為上往下
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromTop
+            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            view.window?.layer.add(transition, forKey: kCATransition)
+            
+            
+            //判斷myPirateGameViewController是否已建立存在
+            if let pirateGameViewController = myPirateGameViewController{
+                
+                //若已建立 myPirateGameViewController 則直接 push 進navigationController
+                navigationController!.pushViewController(pirateGameViewController, animated: true)
+                
+                myPirateGameViewController!.open()
+                
+            }else{
+                
+                //若還未建立 myKujiViewController 則新建立
+                myPirateGameViewController = PirateGameViewController()
+                myPirateGameViewController!.myMainViewController = self
+                
+                //然後再 push 進navigationController
+                navigationController!.pushViewController(myPirateGameViewController!, animated: true)
+
+                
+            }
+            
+            /*
+            if #available(iOS 11.0, *) {
+                
+              // iOS 11.0以上隱藏 HomeIndicator
+                //self.shouldHideHomeIndicator = true
+                self.setNeedsUpdateOfHomeIndicatorAutoHidden()
+            }
+             */
+            
+        }
+        
+    }
+    
+    
     //=====================================================//
     // 音樂開始播放控制
     // 延遲時間默認設置為不延遲(-1.0)
@@ -166,8 +240,8 @@ class MainViewController: UIViewController,URLSessionDelegate {
             }
             
         }
-        
-    }
 
+    }
+    
 }
 

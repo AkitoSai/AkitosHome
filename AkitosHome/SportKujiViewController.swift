@@ -25,7 +25,7 @@ class SportKujiViewController: UIViewController,UITableViewDataSource,UITableVie
     // 顯示 Sport Kuji 結果的 TableView
     var mySportKujiTableView:UITableView!
     
-    // 向 api 請求使用的 SportKujiRequestUnitView
+    // 向 api 取得得獎資訊使用的 SportKujiRequestUnitView
     var mySportKujiRequestUnitView:SportKujiRequestUnitView!
     
     
@@ -92,7 +92,6 @@ class SportKujiViewController: UIViewController,UITableViewDataSource,UITableVie
         //======== 設置自定義最上方的 TitleBarView ========//
         let myTitleBarView = UIView(frame: CGRect(x: 0, y: 0, width: fullSize.width, height: 85 * zoomSize))
         myTitleBarView.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 255/255)
-        myTitleBarView.backgroundColor = UIColor.white
         self.view.addSubview(myTitleBarView)
         //=====================================================//
         
@@ -108,7 +107,7 @@ class SportKujiViewController: UIViewController,UITableViewDataSource,UITableVie
         //=====================================================//
         
         
-        //======== 設置 mySportKujiRequestUnitView ========//
+        //======== 設置向 api 取得得獎資訊使用的 SportKujiRequestUnitView ========//
         mySportKujiRequestUnitView = SportKujiRequestUnitView(frame: CGRect(x: 0, y: 0, width: 200 * zoomSize, height: 160 * zoomSize))
         mySportKujiRequestUnitView.layer.masksToBounds = true
         mySportKujiRequestUnitView.layer.cornerRadius = 15.0
@@ -122,7 +121,6 @@ class SportKujiViewController: UIViewController,UITableViewDataSource,UITableVie
         //======== 設置自定義最上方左邊返回主頁面的 backMainViewButton ========//
         // 設置自定義最上方左邊返回主頁面的 backMainViewButton
         let backMainViewButton = UIButton(frame: CGRect(x: 0, y: 0, width: 75*zoomSize, height: 36*zoomSize))
-        //backMainViewButton.setImage(UIImage(named: "Image/img_main_button_00.jpg"), for: .normal)
 
         let borderColor00 : UIColor = UIColor( red: 0.0, green: 0.0, blue:0.0, alpha: 1.0 )
         backMainViewButton.layer.cornerRadius = 12.0

@@ -20,7 +20,7 @@ enum AudioType{
 class AudioPlayer {
     
     //總共?首背景音樂 BGM
-    let BGM_NUMS:Int = 2
+    let BGM_NUMS:Int = 3
     
     //首背景音樂 BGM 是否播放中
     var isBgmPlaying:Int = -1
@@ -135,13 +135,6 @@ class AudioPlayer {
             
         }
         
-        // 產生震動效果
-        //AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
-        
-        // 初始化 UIImpactFeedbackGenerator
-        //let generator = UIImpactFeedbackGenerator(style: .heavy)
-        // 觸發回饋
-        //generator.impactOccurred()
         
     }
     
