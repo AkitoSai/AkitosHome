@@ -267,7 +267,7 @@ class SportKujiRequestUnitView:UIView {
                 // 更改狀態為執行中
                 setLoadingStatus(isLoading: true)
                 
-                //遊戲執行交給 global 的 Queue　處理
+                // 執行交給 global 的 Queue　處理
                 DispatchQueue.global(qos: .userInitiated).async {
                     urlSessionDataTask.resume()
                 }
