@@ -1,4 +1,4 @@
-# AkitosHome 1.1.0
+# AkitosHome 1.1.1
 
 
 # 主頁面
@@ -24,7 +24,14 @@
 自建敵人的物件class、管理敵人的移動、動畫、是否被擊殺...等動作狀態，敵人被擊殺時，由於之前Http請求功能時已經使用過 delegate 方式了，這邊嘗試使用 Closure 方式 ”var killed: (() -> Void)?“ 實現與遊戲主要控制中心的溝通。
 
 - EffectUnitView  
-遊戲效果的物件class，處理例如敵人被擊殺後變成泡泡的動畫功能。
+遊戲效果的物件class，處理例如敵人被擊殺後變成泡泡的動畫功能。  
+
+- LeaderboardUnitView  
+
+
+- LeaderboardDrawView  
+使用直接繪製View的方式代替TableVIew實現多行的排行榜成績展示功能，以 Closure 方式在繪製完成後依照行數的變更改變上層放置的 ScrollView 的可視內容範圍的高度。
+
 
 # 音樂播放器
 - AudioPlayer:  
