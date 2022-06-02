@@ -551,30 +551,12 @@ class LeaderboardUnitView:UIView,UITextFieldDelegate,UIScrollViewDelegate {
         
         if(newString.length <= maxLength){
             
-            /*
             //限制不能输入特殊字符
-            if(newString.contains(" ") || newString.contains("?") || newString.contains("=") || newString.contains("&")){
-                return false
-            }
-            */
-            
             let length = string.lengthOfBytes(using: String.Encoding.utf8)
 
             for loopIndex in 0..<length {
                 
                 let char = (string as NSString).character(at: loopIndex)
-                
-                /*
-                if ((char == 32) || char == 38) || (char == 61) || (char == 63){
-                    
-                    //32    (space) (space)
-                    //38    &
-                    //61    =
-                    //63    ?
-                    //這3個字元禁止使用
-                    return false
-                }
-                */
                 
                 if (char >= 48) && (char <= 57){//數字
                     return true
