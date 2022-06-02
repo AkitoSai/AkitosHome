@@ -27,7 +27,7 @@
 遊戲效果的物件class，處理例如敵人被擊殺後變成泡泡的動畫功能。  
 
 - LeaderboardUnitView  
-
+透過 Http 的 get 方式向 spkuji_api 請求響應，再用 SportKujiRequestUnitViewDelegate 的 protocol 來回傳結果給 delegate 的方式實現的 class 。
 
 - LeaderboardDrawView  
 使用直接繪製View的方式代替TableVIew實現多行的排行榜成績展示功能，以 Closure 方式在繪製完成後依照行數的變更改變上層放置的 ScrollView 的可視內容範圍的高度。
