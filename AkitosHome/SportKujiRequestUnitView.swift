@@ -124,7 +124,7 @@ class SportKujiRequestUnitView:UIView {
             // 回傳Requess 響應狀態碼(-1 無網路連線) 給 delegate
             if let nowDelegate = delegate{
                 nowDelegate.requestSuccess(statusCode:-1)
-        }
+            }
             return
             
         }else {

@@ -56,6 +56,7 @@ class PirateGameViewController: UIViewController,PirateMainGameCenterViewDelegat
         backMainViewButton.setTitle("^Home^", for: .normal)
         backMainViewButton.addTarget(nil, action: #selector(self.backToMainViewController), for: .touchUpInside)
         backMainViewButton.center = CGPoint(x: 50.0 * zoomSize, y: fullSize.height - (30.0 * zoomSize))
+        backMainViewButton.showsTouchWhenHighlighted = true
         self.view.addSubview(backMainViewButton)
         //=====================================================//
         

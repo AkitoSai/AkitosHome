@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04098FAB284E6922009EB052 /* UIInvitationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04098FAA284E6922009EB052 /* UIInvitationTableViewCell.m */; };
+		04098FAE284F03A5009EB052 /* DataRequestUnit.m in Sources */ = {isa = PBXBuildFile; fileRef = 04098FAD284F03A5009EB052 /* DataRequestUnit.m */; };
+		04202DAC284A43DB00380EA5 /* UserUnitView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04202DAB284A43DB00380EA5 /* UserUnitView.m */; };
+		04202DAF284A621D00380EA5 /* FriendsListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04202DAE284A621D00380EA5 /* FriendsListView.m */; };
+		04202DB2284B2A9100380EA5 /* UIFriendsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04202DB1284B2A9100380EA5 /* UIFriendsTableViewCell.m */; };
 		042625622842E65900B21582 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042625612842E65900B21582 /* AudioPlayer.swift */; };
 		0426256728431A6D00B21582 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0426256628431A6D00B21582 /* AudioToolbox.framework */; };
 		0426256D28432B5C00B21582 /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 0426256C28432B5C00B21582 /* Audio */; };
@@ -14,6 +19,7 @@
 		04262583284599AA00B21582 /* SportKujiRequestUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04262582284599AA00B21582 /* SportKujiRequestUnitView.swift */; };
 		0477371528483EDD003E6C8C /* LeaderboardUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477371428483EDD003E6C8C /* LeaderboardUnitView.swift */; };
 		0477371B2848AE6B003E6C8C /* LeaderboardDrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477371A2848AE6B003E6C8C /* LeaderboardDrawView.swift */; };
+		047737302849AD68003E6C8C /* ObjCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0477372F2849AD68003E6C8C /* ObjCViewController.m */; };
 		04AD3E24284756610026FBBF /* EffectUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AD3E23284756610026FBBF /* EffectUnitView.swift */; };
 		04C72E932845FD0400FEAA54 /* SportKujiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C72E922845FD0400FEAA54 /* SportKujiViewController.swift */; };
 		04C72EA02846A6D400FEAA54 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04C72E9F2846A6D400FEAA54 /* SystemConfiguration.framework */; };
@@ -24,10 +30,19 @@
 		651AA64E283CD47F0027E1F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651AA64D283CD47F0027E1F2 /* AppDelegate.swift */; };
 		651AA650283CD47F0027E1F2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651AA64F283CD47F0027E1F2 /* MainViewController.swift */; };
 		651AA655283CD4810027E1F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651AA654283CD4810027E1F2 /* Assets.xcassets */; };
-		651AA658283CD4810027E1F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651AA656283CD4810027E1F2 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04098FA9284E6922009EB052 /* UIInvitationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIInvitationTableViewCell.h; sourceTree = "<group>"; };
+		04098FAA284E6922009EB052 /* UIInvitationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIInvitationTableViewCell.m; sourceTree = "<group>"; };
+		04098FAC284F03A5009EB052 /* DataRequestUnit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataRequestUnit.h; sourceTree = "<group>"; };
+		04098FAD284F03A5009EB052 /* DataRequestUnit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataRequestUnit.m; sourceTree = "<group>"; };
+		04202DAA284A43DB00380EA5 /* UserUnitView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserUnitView.h; sourceTree = "<group>"; };
+		04202DAB284A43DB00380EA5 /* UserUnitView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserUnitView.m; sourceTree = "<group>"; };
+		04202DAD284A621D00380EA5 /* FriendsListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendsListView.h; sourceTree = "<group>"; };
+		04202DAE284A621D00380EA5 /* FriendsListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendsListView.m; sourceTree = "<group>"; };
+		04202DB0284B2A9100380EA5 /* UIFriendsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIFriendsTableViewCell.h; sourceTree = "<group>"; };
+		04202DB1284B2A9100380EA5 /* UIFriendsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIFriendsTableViewCell.m; sourceTree = "<group>"; };
 		042625612842E65900B21582 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		0426256628431A6D00B21582 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		0426256C28432B5C00B21582 /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = AkitosHome/Audio; sourceTree = "<group>"; };
@@ -35,6 +50,8 @@
 		04262582284599AA00B21582 /* SportKujiRequestUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportKujiRequestUnitView.swift; sourceTree = "<group>"; };
 		0477371428483EDD003E6C8C /* LeaderboardUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardUnitView.swift; sourceTree = "<group>"; };
 		0477371A2848AE6B003E6C8C /* LeaderboardDrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardDrawView.swift; sourceTree = "<group>"; };
+		0477372E2849AD68003E6C8C /* ObjCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCViewController.h; sourceTree = "<group>"; };
+		0477372F2849AD68003E6C8C /* ObjCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjCViewController.m; sourceTree = "<group>"; };
 		04AD3E23284756610026FBBF /* EffectUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectUnitView.swift; sourceTree = "<group>"; };
 		04C72E922845FD0400FEAA54 /* SportKujiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportKujiViewController.swift; sourceTree = "<group>"; };
 		04C72E9F2846A6D400FEAA54 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -48,7 +65,6 @@
 		651AA64D283CD47F0027E1F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		651AA64F283CD47F0027E1F2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		651AA654283CD4810027E1F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		651AA657283CD4810027E1F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		651AA659283CD4810027E1F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,11 +123,22 @@
 				04EC7EC928472BD80025A54A /* EnemyUnitView.swift */,
 				04AD3E23284756610026FBBF /* EffectUnitView.swift */,
 				042625612842E65900B21582 /* AudioPlayer.swift */,
+				0477372F2849AD68003E6C8C /* ObjCViewController.m */,
+				0477372E2849AD68003E6C8C /* ObjCViewController.h */,
+				04202DAE284A621D00380EA5 /* FriendsListView.m */,
+				04202DAD284A621D00380EA5 /* FriendsListView.h */,
+				04098FAD284F03A5009EB052 /* DataRequestUnit.m */,
+				04098FAC284F03A5009EB052 /* DataRequestUnit.h */,
+				04202DB1284B2A9100380EA5 /* UIFriendsTableViewCell.m */,
+				04202DB0284B2A9100380EA5 /* UIFriendsTableViewCell.h */,
+				04098FAA284E6922009EB052 /* UIInvitationTableViewCell.m */,
+				04098FA9284E6922009EB052 /* UIInvitationTableViewCell.h */,
+				04202DAB284A43DB00380EA5 /* UserUnitView.m */,
+				04202DAA284A43DB00380EA5 /* UserUnitView.h */,
 				651AA654283CD4810027E1F2 /* Assets.xcassets */,
-				651AA656283CD4810027E1F2 /* LaunchScreen.storyboard */,
 				651AA659283CD4810027E1F2 /* Info.plist */,
-				04C72EA22846B26D00FEAA54 /* Reachability.h */,
 				04C72EA32846B26D00FEAA54 /* Reachability.m */,
+				04C72EA22846B26D00FEAA54 /* Reachability.h */,
 				04C72EA12846B26D00FEAA54 /* AkitosHome-Bridging-Header.h */,
 			);
 			path = AkitosHome;
@@ -178,7 +205,6 @@
 			files = (
 				0426256D28432B5C00B21582 /* Audio in Resources */,
 				0426256F28435AAA00B21582 /* Image in Resources */,
-				651AA658283CD4810027E1F2 /* LaunchScreen.storyboard in Resources */,
 				651AA655283CD4810027E1F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,29 +220,24 @@
 				04262583284599AA00B21582 /* SportKujiRequestUnitView.swift in Sources */,
 				04C72E932845FD0400FEAA54 /* SportKujiViewController.swift in Sources */,
 				04EC7EC8284719150025A54A /* PirateMainGameCenter.swift in Sources */,
+				04098FAB284E6922009EB052 /* UIInvitationTableViewCell.m in Sources */,
 				04EC7EC6284700700025A54A /* PirateGameViewController.swift in Sources */,
 				042625622842E65900B21582 /* AudioPlayer.swift in Sources */,
+				04202DAF284A621D00380EA5 /* FriendsListView.m in Sources */,
 				651AA650283CD47F0027E1F2 /* MainViewController.swift in Sources */,
+				047737302849AD68003E6C8C /* ObjCViewController.m in Sources */,
 				0477371B2848AE6B003E6C8C /* LeaderboardDrawView.swift in Sources */,
+				04202DB2284B2A9100380EA5 /* UIFriendsTableViewCell.m in Sources */,
 				0477371528483EDD003E6C8C /* LeaderboardUnitView.swift in Sources */,
+				04098FAE284F03A5009EB052 /* DataRequestUnit.m in Sources */,
 				04AD3E24284756610026FBBF /* EffectUnitView.swift in Sources */,
 				04C72EA42846B26D00FEAA54 /* Reachability.m in Sources */,
+				04202DAC284A43DB00380EA5 /* UserUnitView.m in Sources */,
 				651AA64E283CD47F0027E1F2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		651AA656283CD4810027E1F2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				651AA657283CD4810027E1F2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		651AA65A283CD4810027E1F2 /* Debug */ = {
@@ -255,6 +276,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -317,6 +339,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -343,13 +366,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FS53Q5PHGJ;
 				INFOPLIST_FILE = "$(SRCROOT)/AkitosHome/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = akito.tw.AkitosHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AkitosHome/AkitosHome-Bridging-Header.h";
@@ -365,13 +389,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FS53Q5PHGJ;
 				INFOPLIST_FILE = "$(SRCROOT)/AkitosHome/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = akito.tw.AkitosHome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AkitosHome/AkitosHome-Bridging-Header.h";

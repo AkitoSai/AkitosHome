@@ -11,13 +11,14 @@
 import AVFoundation
 import AudioToolbox
 
-enum AudioType{
+@objc enum AudioType: Int{
     
     case bgm //背景音樂
     case se  //效果音
     
 }
-class AudioPlayer {
+
+class AudioPlayer:NSObject {
     
     //總共?首背景音樂 BGM
     let BGM_NUMS:Int = 3
@@ -28,7 +29,7 @@ class AudioPlayer {
     //背景音樂 BGM AVAudioPlayer 存放的Array
     var myBgmPlayers:[AVAudioPlayer] = []
     
-    init(){
+    override init(){
         
         // 建立 BGM 播放器
         

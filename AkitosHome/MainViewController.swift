@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class MainViewController: UIViewController,URLSessionDelegate {
+@objc class MainViewController: UIViewController,URLSessionDelegate {
     
     // 取得螢幕的尺寸
     let fullSize = UIScreen.main.bounds.size
@@ -25,6 +25,9 @@ class MainViewController: UIViewController,URLSessionDelegate {
     
     //海賊遊戲頁面的 ViewController
     var myPirateGameViewController:PirateGameViewController?
+    
+    //ObjC頁面的 ViewController
+    var myObjCViewController:ObjCViewController?
     
     override func viewDidLoad() {
         
@@ -63,7 +66,7 @@ class MainViewController: UIViewController,URLSessionDelegate {
         //======== 建立前往 mySportKujiViewController 頁面的 UIButton ========//
         let goToSportKujiButton = UIButton(frame: CGRect(x: 0, y: 0, width: 305*zoomSize, height: 72*zoomSize))
         goToSportKujiButton.layer.masksToBounds = true
-        goToSportKujiButton.layer.cornerRadius = 15.0
+        goToSportKujiButton.layer.cornerRadius = 15.0*zoomSize
         goToSportKujiButton.setImage(UIImage(named: "Image/img_main_button_00.png"), for: .normal)
         //goToKujiButton.setTitle("スポーツくじ", for: .normal)
         goToSportKujiButton.addTarget(nil, action: #selector(self.goToSportKujiViewController), for: .touchUpInside)
@@ -75,7 +78,7 @@ class MainViewController: UIViewController,URLSessionDelegate {
         //======== 建立前往 myPirateGameViewController 頁面的 UIButton ========//
         let goToPirateGameButton = UIButton(frame: CGRect(x: 0, y: 0, width: 305*zoomSize, height: 72*zoomSize))
         //goToPirateGameButton.layer.masksToBounds = true
-        goToPirateGameButton.layer.cornerRadius = 15.0
+        goToPirateGameButton.layer.cornerRadius = 15.0*zoomSize
         goToPirateGameButton.setImage(UIImage(named: "Image/img_main_button_01.png"), for: .normal)
         //goToPirateGameButton.setTitle("Kill Pirates", for: .normal)
         //goToPirateGameButton.setTitleColor(UIColor.yellow, for: .normal)
@@ -85,6 +88,27 @@ class MainViewController: UIViewController,URLSessionDelegate {
         self.view.addSubview(goToPirateGameButton)
         //=====================================================//
         
+        //======== 建立前往 myObjCViewController 頁面的 UIButton ========//
+        let goToObjCButton = UIButton(frame: CGRect(x: 0, y: 0, width: 305*zoomSize, height: 72*zoomSize))
+        
+        goToObjCButton.layer.cornerRadius = 15.0*zoomSize
+        goToObjCButton.layer.borderColor = UIColor( red: 1.0, green: 1.0, blue:1.0, alpha: 1.0 ).cgColor
+        goToObjCButton.layer.borderWidth = 2.0*zoomSize
+        
+        goToObjCButton.setImage(UIImage(named: "Image/img_main_button_02.png"), for: .normal)
+       
+        goToObjCButton.backgroundColor = UIColor( red: 0.0, green: 0.0, blue:0.0, alpha: 1.0 )
+        goToObjCButton.layer.masksToBounds = true
+        goToObjCButton.layer.cornerRadius = 15.0*zoomSize
+        //goToObjCButton.setImage(UIImage(named: "Image/img_main_button_01.png"), for: .normal)
+        //goToObjCButton.setTitle("Pirate Trade Union", for: .normal)
+        goToObjCButton.setTitleColor(UIColor( red: 0.9, green: 0.6, blue:0.0, alpha: 1.0 ), for: .normal)
+        goToObjCButton.titleLabel!.font = UIFont(name: "Arial Rounded MT Bold", size: 30.0*zoomSize)
+        goToObjCButton.addTarget(nil, action: #selector(self.goToObjCViewController), for: .touchUpInside)
+        goToObjCButton.center = CGPoint(x: fullSize.width * 0.5, y: fullSize.height * 0.89)
+        goToObjCButton.showsTouchWhenHighlighted = true
+        self.view.addSubview(goToObjCButton)
+        //=====================================================//
         
         //======== 初始化全體音效播放器 myAudioPlayer ========//
         myAudioPlayer = AudioPlayer()
@@ -217,13 +241,56 @@ class MainViewController: UIViewController,URLSessionDelegate {
         
     }
     
+    //=====================================================//
+    // 前往 goToObjCViewController 頁面的函式
+    //=====================================================//
+    @objc func goToObjCViewController() {
+        
+        //播放效果音 SE:0
+        playAudio(type:.se,index:0)
+        //播放背景音樂 BGM:1
+        playAudio(type:.bgm,index:1,delay: 0.3)
+        
+        //判斷 navigationController 中最頂端的是否是自己(mainViewController)
+        if(self.navigationController?.topViewController?.isKind(of:MainViewController.self))!{
+        
+            
+            // 設定換頁動畫為上往下
+            let transition = CATransition()
+            transition.duration = 0.5
+            transition.type = CATransitionType.push
+            transition.subtype = CATransitionSubtype.fromTop
+            transition.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut)
+            view.window?.layer.add(transition, forKey: kCATransition)
+            
+            
+            //判斷myObjCViewController是否已建立存在
+            if let objCViewController = myObjCViewController{
+                
+                //若已建立 myObjCViewController 則直接 push 進navigationController
+                navigationController!.pushViewController(objCViewController, animated: true)
+                
+                objCViewController.open()
+                
+            }else{
+                
+                //若還未建立 objCViewController 則新建立
+                myObjCViewController = ObjCViewController()
+                myObjCViewController!.myMainViewController = self
+                
+                //然後再 push 進navigationController
+                navigationController!.pushViewController(myObjCViewController!, animated: true)
+
+                
+            }
+        }
+    }
     
     //=====================================================//
     // 音樂開始播放控制
     // 延遲時間默認設置為不延遲(-1.0)
     //=====================================================//
-    func playAudio(type:AudioType , index:Int , delay: Double = -1.0) {
-        
+    @objc func playAudio(type:AudioType , index:Int , delay: Double = -1.0) {
         
         switch type{
             
@@ -236,12 +303,14 @@ class MainViewController: UIViewController,URLSessionDelegate {
         case .se:
             
             if let audioPlayer:AudioPlayer = myAudioPlayer {
+                
                 audioPlayer.plyaySe(index:index)
+                
             }
             
         }
-
+        
     }
-    
+
 }
 

@@ -284,6 +284,7 @@ class LeaderboardUnitView:UIView,UITextFieldDelegate,UIScrollViewDelegate {
         
     }
     
+    
     //=====================================================//
     // 向 leaderboard_api 發出 Request
     //=====================================================//
@@ -475,7 +476,6 @@ class LeaderboardUnitView:UIView,UITextFieldDelegate,UIScrollViewDelegate {
                         
                     }
                     
-                    
             })
             
             if let urlSessionDataTask = myURLSessionDataTask {
@@ -501,6 +501,7 @@ class LeaderboardUnitView:UIView,UITextFieldDelegate,UIScrollViewDelegate {
         
     }
     
+    
     //=====================================================//
     // 是否顯示讀取進度標示?
     //=====================================================//
@@ -524,6 +525,7 @@ class LeaderboardUnitView:UIView,UITextFieldDelegate,UIScrollViewDelegate {
         }
     }
     
+    
     //=====================================================//
     // 執行 UITextFieldDelegate: 按下Done則收鍵盤上傳
     //=====================================================//
@@ -538,6 +540,8 @@ class LeaderboardUnitView:UIView,UITextFieldDelegate,UIScrollViewDelegate {
         return true
         
     }
+    
+    
     //=====================================================//
     // 執行 UITextFieldDelegate: 判斷輸入字數以及一些限制
     //=====================================================//
@@ -551,12 +555,30 @@ class LeaderboardUnitView:UIView,UITextFieldDelegate,UIScrollViewDelegate {
         
         if(newString.length <= maxLength){
             
+            /*
             //限制不能输入特殊字符
+            if(newString.contains(" ") || newString.contains("?") || newString.contains("=") || newString.contains("&")){
+                return false
+            }
+            */
+            
             let length = string.lengthOfBytes(using: String.Encoding.utf8)
 
             for loopIndex in 0..<length {
                 
                 let char = (string as NSString).character(at: loopIndex)
+                
+                /*
+                if ((char == 32) || char == 38) || (char == 61) || (char == 63){
+                    
+                    //32    (space) (space)
+                    //38    &
+                    //61    =
+                    //63    ?
+                    //這3個字元禁止使用
+                    return false
+                }
+                */
                 
                 if (char >= 48) && (char <= 57){//數字
                     return true
@@ -577,7 +599,7 @@ class LeaderboardUnitView:UIView,UITextFieldDelegate,UIScrollViewDelegate {
         }
         
         return true
+        
     }
-    
     
 }

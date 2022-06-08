@@ -135,7 +135,6 @@ class EffectUnitView:UIImageView {
     //=====================================================//
     func countAnime(){
         
-        
         animeCnt -= 1
         
         //動畫計數到達切換動畫的數目後則切換下一張動畫

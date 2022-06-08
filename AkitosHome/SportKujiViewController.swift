@@ -122,9 +122,8 @@ class SportKujiViewController: UIViewController,UITableViewDataSource,UITableVie
         // 設置自定義最上方左邊返回主頁面的 backMainViewButton
         let backMainViewButton = UIButton(frame: CGRect(x: 0, y: 0, width: 75*zoomSize, height: 36*zoomSize))
 
-        let borderColor00 : UIColor = UIColor( red: 0.0, green: 0.0, blue:0.0, alpha: 1.0 )
         backMainViewButton.layer.cornerRadius = 12.0
-        backMainViewButton.layer.borderColor = borderColor00.cgColor
+        backMainViewButton.layer.borderColor = UIColor( red: 0.0, green: 0.0, blue:0.0, alpha: 1.0 ).cgColor
         backMainViewButton.layer.borderWidth = 2.0
        
         backMainViewButton.backgroundColor = UIColor.red
@@ -144,6 +143,7 @@ class SportKujiViewController: UIViewController,UITableViewDataSource,UITableVie
         backMainViewButton.setTitle("<< Home", for: .normal)
         backMainViewButton.addTarget(nil, action: #selector(self.backToMainViewController), for: .touchUpInside)
         backMainViewButton.center = CGPoint(x: 47.0 * zoomSize, y: 60.0 * zoomSize)
+        backMainViewButton.showsTouchWhenHighlighted = true
         self.view.addSubview(backMainViewButton)
         //=====================================================//
         

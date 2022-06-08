@@ -161,6 +161,7 @@ class LeaderboardDrawView: UIView {
                 path.addLine(to: point)
                 path.fill()
                 path.stroke()
+                
             }
             
         }
