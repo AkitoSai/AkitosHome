@@ -39,8 +39,14 @@
 - FriendsListView  
 工會主架構，其中放置了處理使用者資訊的 UserUnitView、好友列表以及邀請列表的 FriendsListView。
 
-- DataRequestUnit
+- DataRequestUnit  
 實現非同期通訊請求的單元，請求結果可經由 protocol 來回傳結果給 delegate 。
+
+- UIFriendsTableViewCell  
+自定義的TableViewCell，用來顯示好友資料 。
+
+- UIInvitationTableViewCell  
+自定義的TableViewCell，用來顯示向使用者發出交友邀請的名單，包含了同意以及拒絕按鈕，按鈕的結果可經由 protocol 來回傳結果給 delegate 執行追加或刪除。
 
 # 音樂播放器(Swift)
 - AudioPlayer:  
